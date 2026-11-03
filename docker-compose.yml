@@ -1,0 +1,36 @@
+services:
+  linklift-web:
+    build:
+      context: ./src/LinkLift.Web
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - linklift-api
+
+  linklift-api:
+    build:
+      context: .
+      dockerfile: src/LinkLift.Api/Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      - DatabaseProvider=SqlServer # Options: SqlServer, Postgres, Sqlite
+      - ConnectionStrings__DefaultConnection=Server=db;Database=LinkLiftDb;User=sa;Password=YourStrongPassword123;TrustServerCertificate=true;
+      - ConnectionStrings__Redis=redis:6379
+    depends_on:
+      - db
+      - redis
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrongPassword123
+    ports:
+      - "1433:1433"

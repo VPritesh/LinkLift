@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/LinkLift.Api/LinkLift.Api.csproj" />
+    <Project Path="src/LinkLift.Application/LinkLift.Application.csproj" />
+    <Project Path="src/LinkLift.Domain/LinkLift.Domain.csproj" />
+    <Project Path="src/LinkLift.Infrastructure/LinkLift.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/LinkLift.UnitTests/LinkLift.UnitTests.csproj" />
+  </Folder>
+</Solution>
