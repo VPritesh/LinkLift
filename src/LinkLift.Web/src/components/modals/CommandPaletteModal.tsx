@@ -131,10 +131,10 @@ export const CommandPaletteModal: React.FC<CommandPaletteModalProps> = ({
                 onClose();
                 onOpenCreateDrawer();
               }}
-              className="w-full flex items-center justify-between p-2.5 rounded-lg hover:bg-[#035392]/10 text-slate-800 hover:text-[#035392] transition group text-left"
+              className="w-full flex items-center justify-between p-2.5 rounded-lg hover:bg-[#377495]/10 text-slate-800 hover:text-[#377495] transition group text-left"
             >
               <div className="flex items-center space-x-2.5">
-                <div className="p-1.5 rounded-md bg-[#035392] text-white">
+                <div className="p-1.5 rounded-md bg-[#377495] text-white">
                   <Plus className="h-4 w-4" />
                 </div>
                 <div>
@@ -142,7 +142,7 @@ export const CommandPaletteModal: React.FC<CommandPaletteModalProps> = ({
                   <span className="text-[11px] text-slate-400">Generate a new URL with custom slug or dynamic rules</span>
                 </div>
               </div>
-              <ArrowRight className="h-4 w-4 text-slate-300 group-hover:text-[#035392] transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="h-4 w-4 text-slate-300 group-hover:text-[#377495] transition-transform group-hover:translate-x-1" />
             </button>
           </div>
 
@@ -163,12 +163,12 @@ export const CommandPaletteModal: React.FC<CommandPaletteModalProps> = ({
                     className="flex items-center justify-between p-2.5 rounded-lg hover:bg-slate-100 transition cursor-pointer group"
                   >
                     <div className="flex items-center space-x-2.5 min-w-0">
-                      <div className="p-1.5 rounded-md bg-blue-50 text-[#035392]">
+                      <div className="p-1.5 rounded-md bg-blue-50 text-[#377495]">
                         <Link2 className="h-4 w-4" />
                       </div>
                       <div className="truncate">
                         <div className="flex items-center space-x-1.5">
-                          <span className="font-bold text-[#035392]">/{link.slug}</span>
+                          <span className="font-bold text-[#377495]">/{link.slug}</span>
                           {link.title && (
                             <span className="text-slate-700 font-medium truncate">
                               • {link.title}
@@ -228,7 +228,7 @@ export const CommandPaletteModal: React.FC<CommandPaletteModalProps> = ({
                       className="w-full flex items-center justify-between p-2 rounded-lg hover:bg-slate-100 text-slate-700 transition group text-left"
                     >
                       <div className="flex items-center space-x-2.5">
-                        <Icon className="h-4 w-4 text-slate-500 group-hover:text-[#035392]" />
+                        <Icon className="h-4 w-4 text-slate-500 group-hover:text-[#377495]" />
                         <span className="font-medium">{page.label}</span>
                       </div>
                       <span className="text-[10px] text-slate-400 group-hover:text-slate-600 font-mono">Jump</span>
@@ -246,7 +246,7 @@ export const CommandPaletteModal: React.FC<CommandPaletteModalProps> = ({
             <span>Navigation: <kbd className="font-mono bg-white px-1.5 py-0.5 rounded border border-slate-200">↑</kbd> <kbd className="font-mono bg-white px-1.5 py-0.5 rounded border border-slate-200">↓</kbd></span>
             <span>Close: <kbd className="font-mono bg-white px-1.5 py-0.5 rounded border border-slate-200">Esc</kbd></span>
           </div>
-          <span className="font-mono text-[#035392] font-semibold">LinkLift v1.0</span>
+          <span className="font-mono text-[#377495] font-semibold">LinkLift v1.0</span>
         </div>
       </div>
     </div>

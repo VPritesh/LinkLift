@@ -49,7 +49,7 @@ export const DomainsView: React.FC<DomainsViewProps> = ({
       <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h2 className="text-base font-bold text-slate-800 flex items-center space-x-2">
-            <Globe className="h-5 w-5 text-[#035392]" />
+            <Globe className="h-5 w-5 text-[#377495]" />
             <span>Multi-Domain & Host Orchestration</span>
           </h2>
           <p className="text-xs text-slate-500">
@@ -59,7 +59,7 @@ export const DomainsView: React.FC<DomainsViewProps> = ({
 
         <button
           onClick={() => setShowAddModal(true)}
-          className="bg-[#035392] hover:bg-[#024275] text-white text-xs font-semibold px-4 py-2 rounded-lg shadow-sm flex items-center space-x-1.5 transition"
+          className="bg-[#377495] hover:bg-[#295770] text-white text-xs font-semibold px-4 py-2 rounded-lg shadow-sm flex items-center space-x-1.5 transition"
         >
           <Plus className="h-4 w-4" />
           <span>Add Custom Domain</span>
@@ -77,7 +77,7 @@ export const DomainsView: React.FC<DomainsViewProps> = ({
             </p>
             <button
               onClick={() => setShowAddModal(true)}
-              className="mt-4 bg-[#035392] text-white text-xs font-semibold px-4 py-2 rounded-lg shadow"
+              className="mt-4 bg-[#377495] text-white text-xs font-semibold px-4 py-2 rounded-lg shadow"
             >
               Add Your First Domain
             </button>
@@ -99,7 +99,7 @@ export const DomainsView: React.FC<DomainsViewProps> = ({
                   <tr key={d.id} className="hover:bg-slate-50/70 transition">
                     <td className="py-4 px-6">
                       <div className="flex items-center space-x-2">
-                        <span className="font-bold text-sm text-[#035392] font-mono">
+                        <span className="font-bold text-sm text-[#377495] font-mono">
                           {d.hostname}
                         </span>
                         <span className="text-[10px] bg-purple-50 text-purple-700 border border-purple-200 px-1.5 py-0.2 rounded font-medium flex items-center gap-0.5">
@@ -113,7 +113,7 @@ export const DomainsView: React.FC<DomainsViewProps> = ({
 
                     <td className="py-4 px-6 text-slate-600 truncate max-w-xs">
                       {d.customNotFoundUrl ? (
-                        <a href={d.customNotFoundUrl} target="_blank" rel="noreferrer" className="text-[#035392] hover:underline flex items-center gap-1">
+                        <a href={d.customNotFoundUrl} target="_blank" rel="noreferrer" className="text-[#377495] hover:underline flex items-center gap-1">
                           <span className="truncate">{d.customNotFoundUrl}</span>
                           <ExternalLink className="h-3 w-3 shrink-0" />
                         </a>
@@ -183,7 +183,7 @@ export const DomainsView: React.FC<DomainsViewProps> = ({
                     placeholder="go.yourbrand.io"
                     value={hostname}
                     onChange={(e) => setHostname(e.target.value)}
-                    className="w-full text-xs px-3.5 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392]"
+                    className="w-full text-xs px-3.5 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495]"
                   />
                 </div>
 
@@ -196,7 +196,7 @@ export const DomainsView: React.FC<DomainsViewProps> = ({
                     placeholder="https://yourbrand.io/404"
                     value={customNotFoundUrl}
                     onChange={(e) => setCustomNotFoundUrl(e.target.value)}
-                    className="w-full text-xs px-3.5 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392]"
+                    className="w-full text-xs px-3.5 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495]"
                   />
                   <p className="text-[10px] text-slate-400 mt-1">
                     Where visitors go if an unmapped slug is accessed under this hostname.
@@ -212,7 +212,7 @@ export const DomainsView: React.FC<DomainsViewProps> = ({
                     placeholder="EU Marketing Landing Domain"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
-                    className="w-full text-xs px-3.5 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392]"
+                    className="w-full text-xs px-3.5 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495]"
                   />
                 </div>
 
@@ -227,7 +227,7 @@ export const DomainsView: React.FC<DomainsViewProps> = ({
                   <button
                     type="submit"
                     disabled={loading}
-                    className="px-5 py-2 bg-[#035392] hover:bg-[#024275] text-white text-xs font-semibold rounded-lg shadow disabled:opacity-50"
+                    className="px-5 py-2 bg-[#377495] hover:bg-[#295770] text-white text-xs font-semibold rounded-lg shadow disabled:opacity-50"
                   >
                     {loading ? 'Adding...' : 'Add Domain'}
                   </button>

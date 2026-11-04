@@ -86,7 +86,7 @@ export const ApiKeysView: React.FC = () => {
       <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h2 className="text-base font-bold text-slate-800 flex items-center space-x-2">
-            <Key className="h-5 w-5 text-[#035392]" />
+            <Key className="h-5 w-5 text-[#377495]" />
             <span>API Keys & Role-Based Access Control (RBAC)</span>
           </h2>
           <p className="text-xs text-slate-500">
@@ -96,7 +96,7 @@ export const ApiKeysView: React.FC = () => {
 
         <button
           onClick={() => setShowCreateModal(true)}
-          className="bg-[#035392] hover:bg-[#024275] text-white text-xs font-semibold px-4 py-2 rounded-lg shadow flex items-center space-x-1.5 transition"
+          className="bg-[#377495] hover:bg-[#295770] text-white text-xs font-semibold px-4 py-2 rounded-lg shadow flex items-center space-x-1.5 transition"
         >
           <Plus className="h-4 w-4" />
           <span>Generate API Key</span>
@@ -132,7 +132,7 @@ export const ApiKeysView: React.FC = () => {
                   <tr key={k.id} className="hover:bg-slate-50">
                     <td className="py-4 px-6">
                       <span className="font-bold text-slate-900 block">{k.name}</span>
-                      <code className="text-[11px] font-mono text-[#035392] bg-blue-50 px-1.5 py-0.5 rounded border border-blue-100">
+                      <code className="text-[11px] font-mono text-[#377495] bg-blue-50 px-1.5 py-0.5 rounded border border-blue-100">
                         {k.keyPrefix}••••••••
                       </code>
                     </td>
@@ -207,7 +207,7 @@ export const ApiKeysView: React.FC = () => {
                     placeholder="e.g. CI/CD Deployment Runner"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full text-xs px-3.5 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392]"
+                    className="w-full text-xs px-3.5 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495]"
                   />
                 </div>
 
@@ -220,7 +220,7 @@ export const ApiKeysView: React.FC = () => {
                       type="checkbox"
                       checked={canCreate}
                       onChange={(e) => setCanCreate(e.target.checked)}
-                      className="rounded text-[#035392] focus:ring-[#035392]"
+                      className="rounded text-[#377495] focus:ring-[#377495]"
                     />
                     <div>
                       <span className="font-semibold block">links:create</span>
@@ -233,7 +233,7 @@ export const ApiKeysView: React.FC = () => {
                       type="checkbox"
                       checked={canRead}
                       onChange={(e) => setCanRead(e.target.checked)}
-                      className="rounded text-[#035392] focus:ring-[#035392]"
+                      className="rounded text-[#377495] focus:ring-[#377495]"
                     />
                     <div>
                       <span className="font-semibold block">analytics:read</span>
@@ -246,7 +246,7 @@ export const ApiKeysView: React.FC = () => {
                       type="checkbox"
                       checked={canAdmin}
                       onChange={(e) => setCanAdmin(e.target.checked)}
-                      className="rounded text-[#035392] focus:ring-[#035392]"
+                      className="rounded text-[#377495] focus:ring-[#377495]"
                     />
                     <div>
                       <span className="font-semibold block">admin:write</span>
@@ -265,7 +265,7 @@ export const ApiKeysView: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    className="px-5 py-2 bg-[#035392] hover:bg-[#024275] text-white text-xs font-semibold rounded-lg shadow"
+                    className="px-5 py-2 bg-[#377495] hover:bg-[#295770] text-white text-xs font-semibold rounded-lg shadow"
                   >
                     Generate Key
                   </button>
@@ -313,7 +313,7 @@ export const ApiKeysView: React.FC = () => {
               <div className="flex justify-end">
                 <button
                   onClick={() => setRevealedKey(null)}
-                  className="px-5 py-2 bg-[#035392] text-white text-xs font-semibold rounded-lg shadow"
+                  className="px-5 py-2 bg-[#377495] text-white text-xs font-semibold rounded-lg shadow"
                 >
                   I have saved this key safely
                 </button>

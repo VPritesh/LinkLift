@@ -115,7 +115,7 @@ export const LinksListView: React.FC<LinksListViewProps> = ({
             placeholder="Search by slug, title, or destination..."
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
-            className="w-full bg-slate-50 border border-slate-200 text-xs rounded-lg pl-9 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#035392] focus:bg-white transition"
+            className="w-full bg-slate-50 border border-slate-200 text-xs rounded-lg pl-9 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#377495] focus:bg-white transition"
           />
         </div>
 
@@ -125,7 +125,7 @@ export const LinksListView: React.FC<LinksListViewProps> = ({
           <select
             value={selectedDomain}
             onChange={(e) => setSelectedDomain(e.target.value)}
-            className="text-xs bg-slate-50 border border-slate-200 text-slate-700 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#035392]"
+            className="text-xs bg-slate-50 border border-slate-200 text-slate-700 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#377495]"
           >
             <option value="">All Domains</option>
             <option value="apex">Apex / Default Host</option>
@@ -138,7 +138,7 @@ export const LinksListView: React.FC<LinksListViewProps> = ({
           <select
             value={selectedTag}
             onChange={(e) => setSelectedTag(e.target.value)}
-            className="text-xs bg-slate-50 border border-slate-200 text-slate-700 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#035392]"
+            className="text-xs bg-slate-50 border border-slate-200 text-slate-700 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#377495]"
           >
             <option value="">All Tags ({allTags.length})</option>
             {allTags.map(t => (
@@ -160,7 +160,7 @@ export const LinksListView: React.FC<LinksListViewProps> = ({
           {/* Create CTA */}
           <button
             onClick={onOpenCreateDrawer}
-            className="bg-[#035392] hover:bg-[#024275] text-white text-xs font-semibold px-4 py-2 rounded-lg shadow-sm flex items-center space-x-1.5 transition"
+            className="bg-[#377495] hover:bg-[#295770] text-white text-xs font-semibold px-4 py-2 rounded-lg shadow-sm flex items-center space-x-1.5 transition"
           >
             <Plus className="h-4 w-4" />
             <span>New Link</span>
@@ -181,7 +181,7 @@ export const LinksListView: React.FC<LinksListViewProps> = ({
             </p>
             <button
               onClick={onOpenCreateDrawer}
-              className="mt-4 bg-[#035392] hover:bg-[#024275] text-white text-xs font-semibold px-4 py-2 rounded-lg shadow transition inline-flex items-center space-x-1.5"
+              className="mt-4 bg-[#377495] hover:bg-[#295770] text-white text-xs font-semibold px-4 py-2 rounded-lg shadow transition inline-flex items-center space-x-1.5"
             >
               <Plus className="h-4 w-4" />
               <span>Create Shortlink</span>
@@ -211,7 +211,7 @@ export const LinksListView: React.FC<LinksListViewProps> = ({
                         <div className="flex items-center space-x-2">
                           <span 
                             onClick={() => onViewAnalytics(link.slug)}
-                            className="font-bold text-sm text-[#035392] hover:underline cursor-pointer flex items-center gap-1"
+                            className="font-bold text-sm text-[#377495] hover:underline cursor-pointer flex items-center gap-1"
                           >
                             /{link.slug}
                           </span>
@@ -304,7 +304,7 @@ export const LinksListView: React.FC<LinksListViewProps> = ({
                           <button
                             onClick={() => onViewAnalytics(link.slug)}
                             title="View Detailed Analytics"
-                            className="p-1.5 text-slate-500 hover:text-[#035392] hover:bg-slate-100 rounded-lg transition"
+                            className="p-1.5 text-slate-500 hover:text-[#377495] hover:bg-slate-100 rounded-lg transition"
                           >
                             <BarChart3 className="h-4 w-4" />
                           </button>

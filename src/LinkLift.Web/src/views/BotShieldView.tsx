@@ -58,7 +58,7 @@ export const BotShieldView: React.FC = () => {
           </div>
 
           <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
-            <div className="h-8 w-8 rounded-lg bg-blue-100 text-[#035392] flex items-center justify-center font-bold text-xs">
+            <div className="h-8 w-8 rounded-lg bg-blue-100 text-[#377495] flex items-center justify-center font-bold text-xs">
               <ShieldAlert className="h-4 w-4" />
             </div>
             <h4 className="text-xs font-bold text-slate-800">User-Agent Blacklist</h4>
@@ -97,27 +97,27 @@ export const BotShieldView: React.FC = () => {
               type="text"
               value={testUa}
               onChange={(e) => setTestUa(e.target.value)}
-              className="w-full text-xs font-mono px-3.5 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392]"
+              className="w-full text-xs font-mono px-3.5 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495]"
             />
             <div className="flex gap-2 mt-2">
               <button
                 type="button"
                 onClick={() => setTestUa('Mozilla/5.0 (iPhone; CPU iPhone OS 16_5) Mobile/15E148 Safari/604.1')}
-                className="text-[10px] text-slate-500 hover:text-[#035392] underline"
+                className="text-[10px] text-slate-500 hover:text-[#377495] underline"
               >
                 Set iPhone UA
               </button>
               <button
                 type="button"
                 onClick={() => setTestUa('curl/7.68.0')}
-                className="text-[10px] text-slate-500 hover:text-[#035392] underline"
+                className="text-[10px] text-slate-500 hover:text-[#377495] underline"
               >
                 Set Curl UA
               </button>
               <button
                 type="button"
                 onClick={() => setTestUa('Googlebot/2.1 (+http://www.google.com/bot.html)')}
-                className="text-[10px] text-slate-500 hover:text-[#035392] underline"
+                className="text-[10px] text-slate-500 hover:text-[#377495] underline"
               >
                 Set Googlebot
               </button>
@@ -132,14 +132,14 @@ export const BotShieldView: React.FC = () => {
               type="text"
               value={testIp}
               onChange={(e) => setTestIp(e.target.value)}
-              className="w-full text-xs font-mono px-3.5 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392]"
+              className="w-full text-xs font-mono px-3.5 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495]"
             />
             <label className="flex items-center space-x-2 mt-3 text-xs text-slate-700 cursor-pointer">
               <input
                 type="checkbox"
                 checked={rapidSimulated}
                 onChange={(e) => setRapidSimulated(e.target.checked)}
-                className="rounded text-[#035392]"
+                className="rounded text-[#377495]"
               />
               <span className="font-medium">Simulate consecutive click under 3 seconds</span>
             </label>
@@ -149,7 +149,7 @@ export const BotShieldView: React.FC = () => {
         <div className="pt-2 flex items-center justify-between">
           <button
             onClick={handleSimulate}
-            className="px-5 py-2 bg-[#035392] hover:bg-[#024275] text-white text-xs font-semibold rounded-lg shadow flex items-center space-x-1.5"
+            className="px-5 py-2 bg-[#377495] hover:bg-[#295770] text-white text-xs font-semibold rounded-lg shadow flex items-center space-x-1.5"
           >
             <Play className="h-3.5 w-3.5" />
             <span>Evaluate Signature</span>

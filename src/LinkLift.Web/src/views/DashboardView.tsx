@@ -52,7 +52,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
   return (
     <div className="space-y-6 w-full">
       {/* Top Welcome / Hero Banner */}
-      <div className="rounded-2xl bg-gradient-to-r from-[#022c4f] via-[#035392] to-cyan-700 p-8 text-white shadow-lg relative overflow-hidden">
+      <div className="rounded-2xl bg-gradient-to-r from-[#0e1d25] via-[#377495] to-cyan-700 p-8 text-white shadow-lg relative overflow-hidden">
         <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-10 pointer-events-none flex items-center justify-center">
           <Link2 className="w-96 h-96 -mr-20 -mt-20 transform -rotate-12" />
         </div>
@@ -72,7 +72,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           <div className="flex flex-wrap gap-3">
             <button
               onClick={onOpenCreateDrawer}
-              className="bg-white text-[#035392] hover:bg-slate-100 text-xs font-bold px-4 py-2.5 rounded-lg shadow-md transition flex items-center space-x-2"
+              className="bg-white text-[#377495] hover:bg-slate-100 text-xs font-bold px-4 py-2.5 rounded-lg shadow-md transition flex items-center space-x-2"
             >
               <Plus className="h-4 w-4" />
               <span>Create New Shortlink</span>
@@ -101,7 +101,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm hover:shadow-md transition">
           <div className="flex items-center justify-between mb-3">
             <span className="text-xs font-bold text-slate-500 uppercase">Total Links</span>
-            <div className="p-2 rounded-lg bg-blue-50 text-[#035392]">
+            <div className="p-2 rounded-lg bg-blue-50 text-[#377495]">
               <Link2 className="h-5 w-5" />
             </div>
           </div>
@@ -171,7 +171,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             </div>
             <button
               onClick={() => onNavigate('links')}
-              className="text-xs font-semibold text-[#035392] hover:underline flex items-center gap-1"
+              className="text-xs font-semibold text-[#377495] hover:underline flex items-center gap-1"
             >
               <span>View All Links</span>
               <ChevronRight className="h-3.5 w-3.5" />
@@ -184,7 +184,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               <p className="text-sm font-medium">No links created yet</p>
               <button
                 onClick={onOpenCreateDrawer}
-                className="mt-3 text-xs font-semibold text-[#035392] underline"
+                className="mt-3 text-xs font-semibold text-[#377495] underline"
               >
                 Create your first link
               </button>
@@ -195,7 +195,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 <div key={link.id} className="p-4 hover:bg-slate-50/80 transition flex items-center justify-between gap-4">
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center space-x-2">
-                      <span className="font-bold text-[#035392] text-sm hover:underline cursor-pointer">
+                      <span className="font-bold text-[#377495] text-sm hover:underline cursor-pointer">
                         /{link.slug}
                       </span>
                       {link.rules && link.rules.length > 0 && (
@@ -267,7 +267,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             </div>
             <button
               onClick={() => onNavigate('live')}
-              className="text-xs font-semibold text-[#035392] hover:underline flex items-center gap-1"
+              className="text-xs font-semibold text-[#377495] hover:underline flex items-center gap-1"
             >
               <span>Full Radar</span>
               <ChevronRight className="h-3.5 w-3.5" />
@@ -288,7 +288,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 {liveClicks.slice(0, 6).map((click, i) => (
                   <div key={i} className="p-2.5 rounded-lg border border-slate-100 bg-slate-50/60 flex items-center justify-between text-xs">
                     <div className="flex items-center space-x-2.5 min-w-0">
-                      <div className="p-1.5 rounded bg-white shadow-sm text-[#035392]">
+                      <div className="p-1.5 rounded bg-white shadow-sm text-[#377495]">
                         {click.deviceType === 2 ? (
                           <Smartphone className="h-3.5 w-3.5" />
                         ) : (

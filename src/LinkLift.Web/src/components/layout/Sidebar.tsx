@@ -137,14 +137,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
       {/* Sidebar Container */}
       <aside className={`
-        fixed top-0 bottom-0 left-0 z-50 w-72 bg-[#022c4f] text-slate-200 flex flex-col 
-        border-r border-[#033b66] shadow-xl transition-transform duration-300 ease-in-out
+        fixed top-0 bottom-0 left-0 z-50 w-72 bg-[#0e1d25] text-slate-200 flex flex-col 
+        border-r border-[#1c3a4a] shadow-xl transition-transform duration-300 ease-in-out
         ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
       `}>
         {/* Brand Header */}
-        <div className="h-16 px-6 flex items-center justify-between border-b border-[#033b66] bg-[#01233f]">
+        <div className="h-16 px-6 flex items-center justify-between border-b border-[#1c3a4a] bg-[#0a141a]">
           <div className="flex items-center space-x-3">
-            <div className="h-9 w-9 rounded-lg bg-gradient-to-br from-[#035392] to-cyan-500 flex items-center justify-center shadow-lg shadow-cyan-500/20 text-white font-bold">
+            <div className="h-9 w-9 rounded-lg bg-gradient-to-br from-[#377495] to-cyan-500 flex items-center justify-center shadow-lg shadow-cyan-500/20 text-white font-bold">
               <Link2 className="h-5 w-5" />
             </div>
             <div>
@@ -160,14 +160,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
 
         {/* Server Switcher Pill */}
-        <div className="px-4 py-2.5 border-b border-[#033b66]/60 bg-[#012038]">
+        <div className="px-4 py-2.5 border-b border-[#1c3a4a]/60 bg-[#0a141a]">
           <label className="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">
             Active Server
           </label>
           <button
             onClick={onOpenServerSwitcher}
             title="Click to switch or configure server"
-            className="w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-[#033b66] hover:bg-[#044a80] text-white text-xs transition border border-cyan-500/20 group"
+            className="w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-[#1c3a4a] hover:bg-[#044a80] text-white text-xs transition border border-cyan-500/20 group"
           >
             <div className="flex items-center space-x-2 truncate">
               <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
@@ -178,7 +178,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
 
         {/* Domain Scope Selector */}
-        <div className="px-4 py-3 border-b border-[#033b66]/60 bg-[#022543]">
+        <div className="px-4 py-3 border-b border-[#1c3a4a]/60 bg-[#142834]">
           <label className="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">
             Active Scope
           </label>
@@ -186,7 +186,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             <select
               value={selectedDomain}
               onChange={(e) => onSelectDomain(e.target.value)}
-              className="w-full bg-[#033b66] text-xs text-white rounded-lg px-2.5 py-1.5 appearance-none border border-slate-600/50 focus:outline-none focus:ring-1 focus:ring-cyan-400 cursor-pointer pr-8"
+              className="w-full bg-[#1c3a4a] text-xs text-white rounded-lg px-2.5 py-1.5 appearance-none border border-slate-600/50 focus:outline-none focus:ring-1 focus:ring-cyan-400 cursor-pointer pr-8"
             >
               <option value="">All Domains (Global Apex)</option>
               {domains.map((d) => (
@@ -221,8 +221,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
                         w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium
                         transition-all duration-150 group
                         ${isActive 
-                          ? 'bg-[#035392] text-white shadow-md shadow-[#035392]/30 font-semibold' 
-                          : 'text-slate-300 hover:bg-[#033b66]/60 hover:text-white'
+                          ? 'bg-[#377495] text-white shadow-md shadow-[#377495]/30 font-semibold' 
+                          : 'text-slate-300 hover:bg-[#1c3a4a]/60 hover:text-white'
                         }
                       `}
                     >
@@ -254,7 +254,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
 
         {/* Bottom Health & Live Indicators */}
-        <div className="p-4 border-t border-[#033b66] bg-[#01233f] text-xs space-y-2">
+        <div className="p-4 border-t border-[#1c3a4a] bg-[#0a141a] text-xs space-y-2">
           {/* SignalR Socket status */}
           <div className="flex items-center justify-between text-[11px] text-slate-300">
             <span className="flex items-center space-x-1.5">

@@ -58,7 +58,7 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({ isOpen, onClose, onKey
           </button>
 
           <div className="flex items-center space-x-3 mb-3">
-            <div className="p-2 rounded-lg bg-[#035392]/10 text-[#035392]">
+            <div className="p-2 rounded-lg bg-[#377495]/10 text-[#377495]">
               <Key className="h-5 w-5" />
             </div>
             <div>
@@ -79,7 +79,7 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({ isOpen, onClose, onKey
                 required
                 value={apiKey}
                 onChange={(e) => setApiKey(e.target.value)}
-                className="w-full text-xs font-mono px-3.5 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392] bg-slate-50 text-slate-900"
+                className="w-full text-xs font-mono px-3.5 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495] bg-slate-50 text-slate-900"
               />
               <p className="text-[11px] text-slate-500 mt-1 flex items-center gap-1">
                 <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" />
@@ -91,7 +91,7 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({ isOpen, onClose, onKey
               <button
                 type="button"
                 onClick={handleResetMaster}
-                className="text-xs text-slate-500 hover:text-[#035392] underline font-medium"
+                className="text-xs text-slate-500 hover:text-[#377495] underline font-medium"
               >
                 Reset to Default
               </button>
@@ -106,7 +106,7 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({ isOpen, onClose, onKey
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 bg-[#035392] hover:bg-[#024275] text-white text-xs font-semibold rounded-lg shadow flex items-center space-x-1"
+                  className="px-5 py-2 bg-[#377495] hover:bg-[#295770] text-white text-xs font-semibold rounded-lg shadow flex items-center space-x-1"
                 >
                   {saved ? (
                     <>

@@ -37,7 +37,7 @@ export const TagsView: React.FC<TagsViewProps> = ({ links, onSelectTag }) => {
       <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h2 className="text-base font-bold text-slate-800 flex items-center space-x-2">
-            <Tag className="h-5 w-5 text-[#035392]" />
+            <Tag className="h-5 w-5 text-[#377495]" />
             <span>Campaigns & Tags Directory</span>
           </h2>
           <p className="text-xs text-slate-500">
@@ -52,7 +52,7 @@ export const TagsView: React.FC<TagsViewProps> = ({ links, onSelectTag }) => {
             placeholder="Search tags..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full text-xs bg-slate-50 border border-slate-200 rounded-lg pl-9 pr-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#035392]"
+            className="w-full text-xs bg-slate-50 border border-slate-200 rounded-lg pl-9 pr-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#377495]"
           />
         </div>
       </div>
@@ -72,15 +72,15 @@ export const TagsView: React.FC<TagsViewProps> = ({ links, onSelectTag }) => {
             <div
               key={tag.name}
               onClick={() => onSelectTag(tag.name)}
-              className="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-[#035392]/40 transition cursor-pointer flex flex-col justify-between group"
+              className="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-[#377495]/40 transition cursor-pointer flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="font-bold text-sm text-[#035392] bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-100 flex items-center gap-1.5 group-hover:bg-[#035392] group-hover:text-white transition">
+                  <span className="font-bold text-sm text-[#377495] bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-100 flex items-center gap-1.5 group-hover:bg-[#377495] group-hover:text-white transition">
                     <Tag className="h-3.5 w-3.5" />
                     <span>#{tag.name}</span>
                   </span>
-                  <ChevronRight className="h-4 w-4 text-slate-300 group-hover:text-[#035392] transition-transform group-hover:translate-x-1" />
+                  <ChevronRight className="h-4 w-4 text-slate-300 group-hover:text-[#377495] transition-transform group-hover:translate-x-1" />
                 </div>
 
                 <div className="grid grid-cols-2 gap-3 mt-4 text-xs">
@@ -95,7 +95,7 @@ export const TagsView: React.FC<TagsViewProps> = ({ links, onSelectTag }) => {
                 </div>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-slate-100 text-[11px] text-[#035392] font-semibold flex items-center justify-between">
+              <div className="mt-4 pt-3 border-t border-slate-100 text-[11px] text-[#377495] font-semibold flex items-center justify-between">
                 <span>View Filtered Links</span>
                 <span className="font-mono text-slate-400">/{tag.name}</span>
               </div>

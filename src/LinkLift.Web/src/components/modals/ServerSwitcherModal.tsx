@@ -58,7 +58,7 @@ export const ServerSwitcherModal: React.FC<ServerSwitcherModalProps> = ({
         {/* Header */}
         <div className="px-6 py-4 border-b border-slate-200 flex items-center justify-between bg-slate-50">
           <div className="flex items-center space-x-2.5">
-            <div className="p-2 rounded-lg bg-[#035392]/10 text-[#035392]">
+            <div className="p-2 rounded-lg bg-[#377495]/10 text-[#377495]">
               <Server className="h-5 w-5" />
             </div>
             <div>
@@ -86,7 +86,7 @@ export const ServerSwitcherModal: React.FC<ServerSwitcherModalProps> = ({
                 onClick={() => handleSelect(server)}
                 className={`p-4 rounded-xl border text-left transition cursor-pointer flex flex-col justify-between ${
                   isSelected
-                    ? 'border-[#035392] bg-[#035392]/5 ring-1 ring-[#035392]'
+                    ? 'border-[#377495] bg-[#377495]/5 ring-1 ring-[#377495]'
                     : 'border-slate-200 hover:border-slate-300 hover:bg-slate-50'
                 }`}
               >
@@ -117,12 +117,12 @@ export const ServerSwitcherModal: React.FC<ServerSwitcherModalProps> = ({
                       type="button"
                       onClick={(e) => handleTest(server, e)}
                       disabled={testingId === server.id}
-                      className="px-2 py-1 text-[11px] font-semibold text-slate-600 hover:text-[#035392] bg-white border border-slate-200 rounded hover:bg-slate-100 transition flex items-center gap-1 shadow-sm"
+                      className="px-2 py-1 text-[11px] font-semibold text-slate-600 hover:text-[#377495] bg-white border border-slate-200 rounded hover:bg-slate-100 transition flex items-center gap-1 shadow-sm"
                     >
-                      <RefreshCw className={`h-3 w-3 ${testingId === server.id ? 'animate-spin text-[#035392]' : ''}`} />
+                      <RefreshCw className={`h-3 w-3 ${testingId === server.id ? 'animate-spin text-[#377495]' : ''}`} />
                       <span>Ping</span>
                     </button>
-                    {isSelected && <Check className="h-4 w-4 text-[#035392]" />}
+                    {isSelected && <Check className="h-4 w-4 text-[#377495]" />}
                   </div>
                 </div>
 
@@ -153,7 +153,7 @@ export const ServerSwitcherModal: React.FC<ServerSwitcherModalProps> = ({
               onClose();
               onNavigateToManageServers();
             }}
-            className="text-xs font-semibold text-[#035392] hover:underline flex items-center gap-1"
+            className="text-xs font-semibold text-[#377495] hover:underline flex items-center gap-1"
           >
             <span>Manage All Servers & Nodes</span>
             <ExternalLink className="h-3 w-3" />

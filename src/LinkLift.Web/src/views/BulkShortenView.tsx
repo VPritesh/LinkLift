@@ -201,7 +201,7 @@ export const BulkShortenView: React.FC<BulkShortenViewProps> = ({ onReloadLinks 
       <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
           <div className="flex items-center space-x-3">
-            <div className="p-2.5 rounded-lg bg-[#035392]/10 text-[#035392]">
+            <div className="p-2.5 rounded-lg bg-[#377495]/10 text-[#377495]">
               <Layers className="h-6 w-6" />
             </div>
             <div>
@@ -225,7 +225,7 @@ export const BulkShortenView: React.FC<BulkShortenViewProps> = ({ onReloadLinks 
             onClick={() => fileInputRef.current?.click()}
             className="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-lg flex items-center space-x-1.5 transition border border-slate-200 shadow-sm self-start sm:self-auto"
           >
-            <FileSpreadsheet className="h-4 w-4 text-[#035392]" />
+            <FileSpreadsheet className="h-4 w-4 text-[#377495]" />
             <span>Upload CSV File</span>
           </button>
         </div>
@@ -251,7 +251,7 @@ export const BulkShortenView: React.FC<BulkShortenViewProps> = ({ onReloadLinks 
                 }}
                 className={`p-2.5 rounded-lg border text-left transition ${
                   selectedFormat === fmt.id
-                    ? 'border-[#035392] bg-[#035392]/5 ring-1 ring-[#035392]'
+                    ? 'border-[#377495] bg-[#377495]/5 ring-1 ring-[#377495]'
                     : 'border-slate-200 hover:border-slate-300 bg-white'
                 }`}
               >
@@ -264,7 +264,7 @@ export const BulkShortenView: React.FC<BulkShortenViewProps> = ({ onReloadLinks 
 
         {/* Preset Info Banner */}
         <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 text-xs text-slate-600 flex items-start space-x-2">
-          <Info className="h-4 w-4 text-[#035392] flex-shrink-0 mt-0.5" />
+          <Info className="h-4 w-4 text-[#377495] flex-shrink-0 mt-0.5" />
           <div className="space-y-1">
             <span className="font-semibold text-slate-800">
               {selectedFormat === 'standard' && 'Standard LinkLift Format: DestinationUrl, CustomSlug, Title'}
@@ -276,7 +276,7 @@ export const BulkShortenView: React.FC<BulkShortenViewProps> = ({ onReloadLinks 
               <button 
                 type="button" 
                 onClick={() => setInputText(samplePresets[selectedFormat])}
-                className="text-[11px] text-[#035392] font-semibold hover:underline"
+                className="text-[11px] text-[#377495] font-semibold hover:underline"
               >
                 Populate with {selectedFormat} sample data
               </button>
@@ -299,7 +299,7 @@ export const BulkShortenView: React.FC<BulkShortenViewProps> = ({ onReloadLinks 
             placeholder={`Paste CSV content or list of links here...`}
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
-            className="w-full text-xs font-mono p-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392] bg-white text-slate-900 shadow-inner"
+            className="w-full text-xs font-mono p-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495] bg-white text-slate-900 shadow-inner"
           />
         </div>
 
@@ -312,7 +312,7 @@ export const BulkShortenView: React.FC<BulkShortenViewProps> = ({ onReloadLinks 
           <button
             onClick={handleProcess}
             disabled={loading || !inputText.trim()}
-            className="bg-[#035392] hover:bg-[#024275] text-white text-xs font-semibold px-6 py-2.5 rounded-lg shadow flex items-center space-x-1.5 transition disabled:opacity-50"
+            className="bg-[#377495] hover:bg-[#295770] text-white text-xs font-semibold px-6 py-2.5 rounded-lg shadow flex items-center space-x-1.5 transition disabled:opacity-50"
           >
             {loading ? (
               <>
@@ -340,7 +340,7 @@ export const BulkShortenView: React.FC<BulkShortenViewProps> = ({ onReloadLinks 
             </div>
             <button
               onClick={handleDownloadCsv}
-              className="px-3.5 py-1.5 bg-[#035392] hover:bg-[#024275] text-white text-xs font-semibold rounded-lg flex items-center space-x-1.5 shadow"
+              className="px-3.5 py-1.5 bg-[#377495] hover:bg-[#295770] text-white text-xs font-semibold rounded-lg flex items-center space-x-1.5 shadow"
             >
               <Download className="h-3.5 w-3.5" />
               <span>Download Export (.csv)</span>
@@ -372,7 +372,7 @@ export const BulkShortenView: React.FC<BulkShortenViewProps> = ({ onReloadLinks 
                         </span>
                       )}
                     </td>
-                    <td className="py-3 px-4 font-mono font-bold text-[#035392]">
+                    <td className="py-3 px-4 font-mono font-bold text-[#377495]">
                       {item.shortUrl || '—'}
                     </td>
                     <td className="py-3 px-4 font-mono text-slate-700">

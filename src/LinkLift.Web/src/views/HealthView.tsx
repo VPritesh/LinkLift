@@ -44,7 +44,7 @@ export const HealthView: React.FC = () => {
           className="p-2 text-slate-500 hover:text-slate-800 rounded-lg hover:bg-slate-100 transition"
           title="Refresh"
         >
-          <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin text-[#035392]' : ''}`} />
+          <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin text-[#377495]' : ''}`} />
         </button>
       </div>
 
@@ -71,7 +71,7 @@ export const HealthView: React.FC = () => {
         <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm space-y-3">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold text-slate-500 uppercase">Persistence</span>
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-[#035392] border border-blue-200 flex items-center gap-1">
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-[#377495] border border-blue-200 flex items-center gap-1">
               <Database className="h-3 w-3" /> EF Core 10
             </span>
           </div>
@@ -103,7 +103,7 @@ export const HealthView: React.FC = () => {
       </div>
 
       {/* OpenAPI Reference Banner */}
-      <div className="bg-gradient-to-r from-slate-900 to-[#022c4f] rounded-xl p-6 text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="bg-gradient-to-r from-slate-900 to-[#0e1d25] rounded-xl p-6 text-white flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
           <h3 className="text-base font-bold">Interactive OpenAPI / Swagger Documentation</h3>
           <p className="text-xs text-slate-300 mt-1">

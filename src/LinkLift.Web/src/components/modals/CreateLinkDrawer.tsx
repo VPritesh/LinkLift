@@ -133,9 +133,9 @@ export const CreateLinkDrawer: React.FC<CreateLinkDrawerProps> = ({
       <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
         <div className="w-screen max-w-xl bg-white shadow-2xl flex flex-col">
           {/* Header */}
-          <div className="px-6 py-5 bg-[#022c4f] text-white flex items-center justify-between border-b border-[#033b66]">
+          <div className="px-6 py-5 bg-[#0e1d25] text-white flex items-center justify-between border-b border-[#1c3a4a]">
             <div className="flex items-center space-x-3">
-              <div className="h-9 w-9 rounded-lg bg-[#035392] flex items-center justify-center text-cyan-300">
+              <div className="h-9 w-9 rounded-lg bg-[#377495] flex items-center justify-center text-cyan-300">
                 <Link2 className="h-5 w-5" />
               </div>
               <div>
@@ -157,7 +157,7 @@ export const CreateLinkDrawer: React.FC<CreateLinkDrawerProps> = ({
               onClick={() => setActiveTab('basics')}
               className={`py-3 px-3 text-xs font-semibold flex items-center space-x-2 border-b-2 transition ${
                 activeTab === 'basics' 
-                  ? 'border-[#035392] text-[#035392]' 
+                  ? 'border-[#377495] text-[#377495]' 
                   : 'border-transparent text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -169,7 +169,7 @@ export const CreateLinkDrawer: React.FC<CreateLinkDrawerProps> = ({
               onClick={() => setActiveTab('rules')}
               className={`py-3 px-3 text-xs font-semibold flex items-center space-x-2 border-b-2 transition ${
                 activeTab === 'rules' 
-                  ? 'border-[#035392] text-[#035392]' 
+                  ? 'border-[#377495] text-[#377495]' 
                   : 'border-transparent text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -181,7 +181,7 @@ export const CreateLinkDrawer: React.FC<CreateLinkDrawerProps> = ({
               onClick={() => setActiveTab('expiration')}
               className={`py-3 px-3 text-xs font-semibold flex items-center space-x-2 border-b-2 transition ${
                 activeTab === 'expiration' 
-                  ? 'border-[#035392] text-[#035392]' 
+                  ? 'border-[#377495] text-[#377495]' 
                   : 'border-transparent text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -213,7 +213,7 @@ export const CreateLinkDrawer: React.FC<CreateLinkDrawerProps> = ({
                       placeholder="https://yourbrand.com/products/summer-sale?utm_source=twitter"
                       value={originalUrl}
                       onChange={(e) => setOriginalUrl(e.target.value)}
-                      className="w-full text-xs px-3.5 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392] bg-white text-slate-900"
+                      className="w-full text-xs px-3.5 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495] bg-white text-slate-900"
                     />
                   </div>
 
@@ -225,7 +225,7 @@ export const CreateLinkDrawer: React.FC<CreateLinkDrawerProps> = ({
                       <select
                         value={domainHostname}
                         onChange={(e) => setDomainHostname(e.target.value)}
-                        className="w-full text-xs px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392] bg-white text-slate-900"
+                        className="w-full text-xs px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495] bg-white text-slate-900"
                       >
                         <option value="">Default Host / Apex</option>
                         {domains.map(d => (
@@ -245,7 +245,7 @@ export const CreateLinkDrawer: React.FC<CreateLinkDrawerProps> = ({
                         placeholder="e.g. launch or 🚀"
                         value={customSlug}
                         onChange={(e) => setCustomSlug(e.target.value)}
-                        className="w-full text-xs px-3.5 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392] bg-white text-slate-900"
+                        className="w-full text-xs px-3.5 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495] bg-white text-slate-900"
                       />
                       <p className="text-[10px] text-slate-400 mt-1">
                         Leave blank for auto-generated Base62 string (e.g. <code>4c92</code>). Emojis supported!
@@ -262,7 +262,7 @@ export const CreateLinkDrawer: React.FC<CreateLinkDrawerProps> = ({
                       placeholder="Q4 Product Launch Campaign"
                       value={title}
                       onChange={(e) => setTitle(e.target.value)}
-                      className="w-full text-xs px-3.5 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392] bg-white text-slate-900"
+                      className="w-full text-xs px-3.5 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495] bg-white text-slate-900"
                     />
                   </div>
 
@@ -275,7 +275,7 @@ export const CreateLinkDrawer: React.FC<CreateLinkDrawerProps> = ({
                       placeholder="social, promo, black-friday"
                       value={tagsInput}
                       onChange={(e) => setTagsInput(e.target.value)}
-                      className="w-full text-xs px-3.5 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392] bg-white text-slate-900"
+                      className="w-full text-xs px-3.5 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495] bg-white text-slate-900"
                     />
                   </div>
 
@@ -288,7 +288,7 @@ export const CreateLinkDrawer: React.FC<CreateLinkDrawerProps> = ({
                       placeholder="Internal tracking notes..."
                       value={description}
                       onChange={(e) => setDescription(e.target.value)}
-                      className="w-full text-xs px-3.5 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392] bg-white text-slate-900"
+                      className="w-full text-xs px-3.5 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495] bg-white text-slate-900"
                     />
                   </div>
                 </div>
@@ -299,7 +299,7 @@ export const CreateLinkDrawer: React.FC<CreateLinkDrawerProps> = ({
                 <div className="space-y-4">
                   <div className="bg-slate-50 p-3.5 rounded-lg border border-slate-200">
                     <h4 className="text-xs font-bold text-slate-800 flex items-center gap-1.5 mb-1">
-                      <Compass className="h-4 w-4 text-[#035392]" />
+                      <Compass className="h-4 w-4 text-[#377495]" />
                       <span>Dynamic Edge Redirection</span>
                     </h4>
                     <p className="text-[11px] text-slate-500">
@@ -352,7 +352,7 @@ export const CreateLinkDrawer: React.FC<CreateLinkDrawerProps> = ({
                     <button
                       type="button"
                       onClick={handleAddRule}
-                      className="w-full py-1.5 bg-[#035392] hover:bg-[#024275] text-white text-xs font-medium rounded-md flex items-center justify-center space-x-1 transition"
+                      className="w-full py-1.5 bg-[#377495] hover:bg-[#295770] text-white text-xs font-medium rounded-md flex items-center justify-center space-x-1 transition"
                     >
                       <Plus className="h-3.5 w-3.5" />
                       <span>Add Rule</span>
@@ -414,11 +414,11 @@ export const CreateLinkDrawer: React.FC<CreateLinkDrawerProps> = ({
                           onClick={() => setRedirectType(item.code)}
                           className={`p-3 rounded-lg border text-left transition ${
                             redirectType === item.code
-                              ? 'border-[#035392] bg-[#035392]/5 ring-1 ring-[#035392]'
+                              ? 'border-[#377495] bg-[#377495]/5 ring-1 ring-[#377495]'
                               : 'border-slate-200 hover:bg-slate-50'
                           }`}
                         >
-                          <span className={`block font-bold text-xs ${redirectType === item.code ? 'text-[#035392]' : 'text-slate-800'}`}>
+                          <span className={`block font-bold text-xs ${redirectType === item.code ? 'text-[#377495]' : 'text-slate-800'}`}>
                             {item.title}
                           </span>
                           <span className="text-[10px] text-slate-500 leading-tight block mt-1">
@@ -438,7 +438,7 @@ export const CreateLinkDrawer: React.FC<CreateLinkDrawerProps> = ({
                         type="datetime-local"
                         value={expiresAt}
                         onChange={(e) => setExpiresAt(e.target.value)}
-                        className="w-full text-xs px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392] bg-white text-slate-900"
+                        className="w-full text-xs px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495] bg-white text-slate-900"
                       />
                       <p className="text-[10px] text-slate-400 mt-1">
                         Link will return HTTP 410 Gone after this timestamp.
@@ -455,7 +455,7 @@ export const CreateLinkDrawer: React.FC<CreateLinkDrawerProps> = ({
                         placeholder="e.g. 500"
                         value={maxClicks}
                         onChange={(e) => setMaxClicks(e.target.value)}
-                        className="w-full text-xs px-3.5 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392] bg-white text-slate-900"
+                        className="w-full text-xs px-3.5 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495] bg-white text-slate-900"
                       />
                       <p className="text-[10px] text-slate-400 mt-1">
                         Automatically disables after threshold clicks.
@@ -479,7 +479,7 @@ export const CreateLinkDrawer: React.FC<CreateLinkDrawerProps> = ({
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-[#035392] hover:bg-[#024275] text-white text-xs font-semibold px-6 py-2.5 rounded-lg shadow-md shadow-[#035392]/20 flex items-center space-x-1.5 transition disabled:opacity-50"
+                className="bg-[#377495] hover:bg-[#295770] text-white text-xs font-semibold px-6 py-2.5 rounded-lg shadow-md shadow-[#377495]/20 flex items-center space-x-1.5 transition disabled:opacity-50"
               >
                 {loading ? (
                   <span>Generating...</span>

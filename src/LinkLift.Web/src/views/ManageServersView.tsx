@@ -171,7 +171,7 @@ export const ManageServersView: React.FC<ManageServersViewProps> = ({ onServerSw
       {/* Header Card */}
       <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div className="flex items-center space-x-3">
-          <div className="p-2.5 rounded-lg bg-[#035392]/10 text-[#035392]">
+          <div className="p-2.5 rounded-lg bg-[#377495]/10 text-[#377495]">
             <Server className="h-6 w-6" />
           </div>
           <div>
@@ -206,7 +206,7 @@ export const ManageServersView: React.FC<ManageServersViewProps> = ({ onServerSw
 
           <button
             onClick={() => setIsAdding(true)}
-            className="px-4 py-2 bg-[#035392] hover:bg-[#024275] text-white text-xs font-semibold rounded-lg flex items-center space-x-1.5 shadow-md shadow-[#035392]/20 transition"
+            className="px-4 py-2 bg-[#377495] hover:bg-[#295770] text-white text-xs font-semibold rounded-lg flex items-center space-x-1.5 shadow-md shadow-[#377495]/20 transition"
           >
             <Plus className="h-4 w-4" />
             <span>Add Server</span>
@@ -216,10 +216,10 @@ export const ManageServersView: React.FC<ManageServersViewProps> = ({ onServerSw
 
       {/* Add Server Inline Modal / Panel */}
       {isAdding && (
-        <div className="bg-white rounded-xl border-2 border-[#035392]/30 p-6 shadow-md space-y-4 animate-in fade-in">
+        <div className="bg-white rounded-xl border-2 border-[#377495]/30 p-6 shadow-md space-y-4 animate-in fade-in">
           <div className="flex items-center justify-between border-b border-slate-100 pb-3">
             <h3 className="text-sm font-bold text-slate-800 flex items-center gap-2">
-              <Zap className="h-4 w-4 text-[#035392]" />
+              <Zap className="h-4 w-4 text-[#377495]" />
               Add New LinkLift Server Connection
             </h3>
             <button
@@ -240,7 +240,7 @@ export const ManageServersView: React.FC<ManageServersViewProps> = ({ onServerSw
                 placeholder="e.g. EU Production Cluster"
                 value={formName}
                 onChange={(e) => setFormName(e.target.value)}
-                className="w-full text-xs p-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392]"
+                className="w-full text-xs p-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495]"
               />
             </div>
 
@@ -253,7 +253,7 @@ export const ManageServersView: React.FC<ManageServersViewProps> = ({ onServerSw
                 placeholder="https://linklift.mycompany.com or http://localhost:5000"
                 value={formUrl}
                 onChange={(e) => setFormUrl(e.target.value)}
-                className="w-full text-xs p-2.5 border border-slate-300 rounded-lg font-mono focus:outline-none focus:ring-2 focus:ring-[#035392]"
+                className="w-full text-xs p-2.5 border border-slate-300 rounded-lg font-mono focus:outline-none focus:ring-2 focus:ring-[#377495]"
               />
             </div>
 
@@ -266,7 +266,7 @@ export const ManageServersView: React.FC<ManageServersViewProps> = ({ onServerSw
                 placeholder="ll_live_..."
                 value={formApiKey}
                 onChange={(e) => setFormApiKey(e.target.value)}
-                className="w-full text-xs p-2.5 border border-slate-300 rounded-lg font-mono focus:outline-none focus:ring-2 focus:ring-[#035392]"
+                className="w-full text-xs p-2.5 border border-slate-300 rounded-lg font-mono focus:outline-none focus:ring-2 focus:ring-[#377495]"
               />
             </div>
           </div>
@@ -277,7 +277,7 @@ export const ManageServersView: React.FC<ManageServersViewProps> = ({ onServerSw
                 type="checkbox"
                 checked={formIsDefault}
                 onChange={(e) => setFormIsDefault(e.target.checked)}
-                className="rounded border-slate-300 text-[#035392] focus:ring-[#035392]"
+                className="rounded border-slate-300 text-[#377495] focus:ring-[#377495]"
               />
               <span>Set as default active server upon save</span>
             </label>
@@ -299,7 +299,7 @@ export const ManageServersView: React.FC<ManageServersViewProps> = ({ onServerSw
               <button
                 type="button"
                 onClick={handleSaveNewServer}
-                className="px-5 py-2 bg-[#035392] hover:bg-[#024275] text-white text-xs font-semibold rounded-lg shadow transition"
+                className="px-5 py-2 bg-[#377495] hover:bg-[#295770] text-white text-xs font-semibold rounded-lg shadow transition"
               >
                 Save Server
               </button>
@@ -335,7 +335,7 @@ export const ManageServersView: React.FC<ManageServersViewProps> = ({ onServerSw
               key={server.id}
               className={`bg-white rounded-xl border p-5 transition shadow-sm relative flex flex-col justify-between ${
                 isActive 
-                  ? 'border-[#035392] ring-2 ring-[#035392]/20' 
+                  ? 'border-[#377495] ring-2 ring-[#377495]/20' 
                   : 'border-slate-200 hover:border-slate-300'
               }`}
             >
@@ -343,7 +343,7 @@ export const ManageServersView: React.FC<ManageServersViewProps> = ({ onServerSw
                 <div className="flex items-start justify-between">
                   <div className="flex items-center space-x-2.5">
                     <div className={`p-2 rounded-lg ${
-                      isActive ? 'bg-[#035392] text-white' : 'bg-slate-100 text-slate-600'
+                      isActive ? 'bg-[#377495] text-white' : 'bg-slate-100 text-slate-600'
                     }`}>
                       <Server className="h-5 w-5" />
                     </div>
@@ -384,7 +384,7 @@ export const ManageServersView: React.FC<ManageServersViewProps> = ({ onServerSw
                 {/* API Key Mask */}
                 <div className="mt-4 p-2.5 bg-slate-50 rounded-lg border border-slate-200 flex items-center justify-between text-xs">
                   <div className="flex items-center space-x-2 text-slate-600">
-                    <Key className="h-3.5 w-3.5 text-[#035392]" />
+                    <Key className="h-3.5 w-3.5 text-[#377495]" />
                     <span className="font-mono text-[11px]">
                       {server.apiKey.substring(0, 6)}••••••••••••••••
                     </span>
@@ -417,16 +417,16 @@ export const ManageServersView: React.FC<ManageServersViewProps> = ({ onServerSw
                   type="button"
                   onClick={() => handleTestConnection(server.id, server.url, server.apiKey)}
                   disabled={status?.loading}
-                  className="text-xs font-semibold text-slate-600 hover:text-[#035392] flex items-center space-x-1"
+                  className="text-xs font-semibold text-slate-600 hover:text-[#377495] flex items-center space-x-1"
                 >
-                  <RefreshCw className={`h-3.5 w-3.5 ${status?.loading ? 'animate-spin text-[#035392]' : ''}`} />
+                  <RefreshCw className={`h-3.5 w-3.5 ${status?.loading ? 'animate-spin text-[#377495]' : ''}`} />
                   <span>Test Status</span>
                 </button>
 
                 {!isActive ? (
                   <button
                     onClick={() => handleSwitchServer(server)}
-                    className="px-3 py-1.5 bg-[#035392] hover:bg-[#024275] text-white text-xs font-semibold rounded-lg flex items-center space-x-1 shadow transition"
+                    className="px-3 py-1.5 bg-[#377495] hover:bg-[#295770] text-white text-xs font-semibold rounded-lg flex items-center space-x-1 shadow transition"
                   >
                     <Radio className="h-3.5 w-3.5" />
                     <span>Switch to this Server</span>

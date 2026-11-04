@@ -48,16 +48,16 @@ export const LiveTelemetryView: React.FC<LiveTelemetryViewProps> = ({
   return (
     <div className="space-y-6 w-full">
       {/* Top Telemetry Radar Status */}
-      <div className="bg-[#022c4f] rounded-2xl p-6 text-white shadow-lg border border-[#033b66] flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="bg-[#0e1d25] rounded-2xl p-6 text-white shadow-lg border border-[#1c3a4a] flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className="flex items-center space-x-3">
           <div className="relative">
-            <div className="h-12 w-12 rounded-xl bg-[#035392] flex items-center justify-center text-cyan-300 shadow-md">
+            <div className="h-12 w-12 rounded-xl bg-[#377495] flex items-center justify-center text-cyan-300 shadow-md">
               <Activity className="h-6 w-6" />
             </div>
             {isConnected && (
               <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-[#022c4f]"></span>
+                <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-[#0e1d25]"></span>
               </span>
             )}
           </div>
@@ -80,15 +80,15 @@ export const LiveTelemetryView: React.FC<LiveTelemetryViewProps> = ({
 
         {/* Counter Pills */}
         <div className="flex items-center space-x-3 text-xs">
-          <div className="bg-[#01233f] px-3 py-2 rounded-lg border border-[#033b66]">
+          <div className="bg-[#0a141a] px-3 py-2 rounded-lg border border-[#1c3a4a]">
             <span className="text-slate-400 block text-[10px] uppercase font-bold">Total Ingested</span>
             <span className="text-base font-black text-cyan-300">{clicks.length}</span>
           </div>
-          <div className="bg-[#01233f] px-3 py-2 rounded-lg border border-[#033b66]">
+          <div className="bg-[#0a141a] px-3 py-2 rounded-lg border border-[#1c3a4a]">
             <span className="text-slate-400 block text-[10px] uppercase font-bold">Real Visitors</span>
             <span className="text-base font-black text-emerald-400">{humanCount}</span>
           </div>
-          <div className="bg-[#01233f] px-3 py-2 rounded-lg border border-[#033b66]">
+          <div className="bg-[#0a141a] px-3 py-2 rounded-lg border border-[#1c3a4a]">
             <span className="text-slate-400 block text-[10px] uppercase font-bold">Bots Shielded</span>
             <span className="text-base font-black text-amber-400">{botCount}</span>
           </div>
@@ -159,7 +159,7 @@ export const LiveTelemetryView: React.FC<LiveTelemetryViewProps> = ({
 
                 <div>
                   <div className="flex items-center space-x-2 flex-wrap gap-y-1">
-                    <span className="font-extrabold text-[#035392] text-sm font-mono">
+                    <span className="font-extrabold text-[#377495] text-sm font-mono">
                       /{click.slug}
                     </span>
 

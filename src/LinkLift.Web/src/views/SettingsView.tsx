@@ -76,7 +76,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({ onNavigateToServers 
       {/* Header Card */}
       <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div className="flex items-center space-x-3">
-          <div className="p-2.5 rounded-lg bg-[#035392]/10 text-[#035392]">
+          <div className="p-2.5 rounded-lg bg-[#377495]/10 text-[#377495]">
             <Settings className="h-6 w-6" />
           </div>
           <div>
@@ -111,7 +111,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({ onNavigateToServers 
               onClick={() => setActiveTab(tab.id as any)}
               className={`py-3.5 px-4 text-xs font-bold border-b-2 flex items-center space-x-2 transition ${
                 isActive
-                  ? 'border-[#035392] text-[#035392]'
+                  ? 'border-[#377495] text-[#377495]'
                   : 'border-transparent text-slate-500 hover:text-slate-800 hover:border-slate-300'
               }`}
             >
@@ -128,7 +128,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({ onNavigateToServers 
           {/* Active Server Context Pill */}
           <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="p-2 rounded-lg bg-[#035392] text-white">
+              <div className="p-2 rounded-lg bg-[#377495] text-white">
                 <Server className="h-4 w-4" />
               </div>
               <div>
@@ -142,7 +142,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({ onNavigateToServers 
             </div>
             <button
               onClick={onNavigateToServers}
-              className="text-xs text-[#035392] font-semibold hover:underline flex items-center gap-1"
+              className="text-xs text-[#377495] font-semibold hover:underline flex items-center gap-1"
             >
               <span>Manage Server Fleet</span>
               <ChevronRight className="h-3.5 w-3.5" />
@@ -161,7 +161,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({ onNavigateToServers 
               <select
                 value={settings.defaultRedirectType}
                 onChange={(e) => handleUpdate({ defaultRedirectType: parseInt(e.target.value) })}
-                className="w-full text-xs p-2.5 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392]"
+                className="w-full text-xs p-2.5 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495]"
               >
                 <option value={302}>302 Found (Recommended: Enables real-time rule evaluation & analytics)</option>
                 <option value={301}>301 Moved Permanently (Cached aggressively by client browsers)</option>
@@ -183,7 +183,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({ onNavigateToServers 
                   const val = e.target.value === 'none' ? null : parseInt(e.target.value);
                   handleUpdate({ defaultExpirationDays: val });
                 }}
-                className="w-full text-xs p-2.5 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392]"
+                className="w-full text-xs p-2.5 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495]"
               >
                 <option value="none">No Expiration (Indefinite Lifespan)</option>
                 <option value="7">Expire after 7 Days</option>
@@ -211,7 +211,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({ onNavigateToServers 
               <select
                 value={settings.linksPerPage}
                 onChange={(e) => handleUpdate({ linksPerPage: parseInt(e.target.value) })}
-                className="w-full text-xs p-2.5 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392]"
+                className="w-full text-xs p-2.5 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495]"
               >
                 <option value={10}>10 Links per page</option>
                 <option value={25}>25 Links per page (Default)</option>
@@ -231,7 +231,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({ onNavigateToServers 
               <select
                 value={settings.telemetryBufferLimit}
                 onChange={(e) => handleUpdate({ telemetryBufferLimit: parseInt(e.target.value) })}
-                className="w-full text-xs p-2.5 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#035392]"
+                className="w-full text-xs p-2.5 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#377495]"
               >
                 <option value={50}>50 Events</option>
                 <option value={100}>100 Events (Recommended)</option>
@@ -265,7 +265,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({ onNavigateToServers 
             {/* Export Card */}
             <div className="p-5 border border-slate-200 rounded-xl bg-slate-50 space-y-3">
               <div className="flex items-center space-x-2 text-slate-800 font-bold text-sm">
-                <Download className="h-4 w-4 text-[#035392]" />
+                <Download className="h-4 w-4 text-[#377495]" />
                 <span>Export Configuration Backup</span>
               </div>
               <p className="text-xs text-slate-600">
@@ -274,7 +274,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({ onNavigateToServers 
               <button
                 type="button"
                 onClick={handleExportJson}
-                className="px-4 py-2 bg-[#035392] hover:bg-[#024275] text-white text-xs font-semibold rounded-lg flex items-center space-x-1.5 shadow transition"
+                className="px-4 py-2 bg-[#377495] hover:bg-[#295770] text-white text-xs font-semibold rounded-lg flex items-center space-x-1.5 shadow transition"
               >
                 <Download className="h-3.5 w-3.5" />
                 <span>Download JSON Backup</span>
@@ -284,7 +284,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({ onNavigateToServers 
             {/* Import Card */}
             <div className="p-5 border border-slate-200 rounded-xl bg-slate-50 space-y-3">
               <div className="flex items-center space-x-2 text-slate-800 font-bold text-sm">
-                <Upload className="h-4 w-4 text-[#035392]" />
+                <Upload className="h-4 w-4 text-[#377495]" />
                 <span>Restore from JSON Backup</span>
               </div>
               <p className="text-xs text-slate-600">
@@ -309,7 +309,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({ onNavigateToServers 
       {activeTab === 'about' && (
         <div className="bg-white rounded-b-xl p-6 border border-slate-200 border-t-0 shadow-sm space-y-4">
           <div className="flex items-center space-x-3 mb-4">
-            <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-[#035392] to-cyan-500 flex items-center justify-center text-white font-bold shadow-md">
+            <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-[#377495] to-cyan-500 flex items-center justify-center text-white font-bold shadow-md">
               <Zap className="h-5 w-5" />
             </div>
             <div>
