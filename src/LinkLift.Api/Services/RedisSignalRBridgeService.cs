@@ -36,7 +36,7 @@ public class RedisSignalRBridgeService : BackgroundService
         try
         {
             var sub = _redis.GetSubscriber();
-            await sub.SubscribeAsync(ChannelName, async (channel, message) =>
+            await sub.SubscribeAsync(RedisChannel.Literal(ChannelName), async (channel, message) =>
             {
                 try
                 {
