@@ -12,7 +12,6 @@ import {
   Server,
   Settings,
   ChevronDown,
-  ChevronRight,
   ExternalLink,
   Wifi,
   WifiOff,
@@ -117,54 +116,54 @@ export const Sidebar: React.FC<SidebarProps> = ({
       {isOpen && (
         <div 
           onClick={onCloseMobile}
-          className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-40 lg:hidden"
+          className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 lg:hidden"
         />
       )}
 
-      {/* Sidebar Container */}
+      {/* Sidebar Container - Dark Mode Charcoal-Blue */}
       <aside className={`
-        fixed top-0 bottom-0 left-0 z-50 w-72 bg-white text-slate-800 flex flex-col 
-        border-r border-slate-200 transition-transform duration-300 ease-in-out shadow-sm
+        fixed top-0 bottom-0 left-0 z-50 w-72 bg-[#0e1d25] text-slate-200 flex flex-col 
+        border-r border-[#1c3a4a] transition-transform duration-300 ease-in-out shadow-xl
         ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
       `}>
-        {/* Unified Workspace & Server Header (Linear / Slack Style) */}
-        <div className="h-16 px-4 flex items-center justify-between border-b border-slate-200 bg-white">
+        {/* Unified Workspace & Server Header (Dark Charcoal-Blue Apex) */}
+        <div className="h-16 px-4 flex items-center justify-between border-b border-[#1c3a4a] bg-[#0a141a]">
           <button
             onClick={onOpenServerSwitcher}
             title="Click to switch active cluster / server"
-            className="w-full flex items-center justify-between p-2 rounded-xl hover:bg-slate-100 transition group text-left"
+            className="w-full flex items-center justify-between p-2 rounded-xl hover:bg-[#142834] transition group text-left"
           >
             <div className="flex items-center space-x-2.5 min-w-0">
-              <div className="h-8 w-8 rounded-lg bg-[#377495] flex items-center justify-center text-white font-bold shadow-sm flex-shrink-0">
+              <div className="h-8 w-8 rounded-lg bg-[#377495] flex items-center justify-center text-white font-bold shadow-md shadow-[#377495]/20 flex-shrink-0">
                 <Link2 className="h-4 w-4" />
               </div>
               <div className="min-w-0">
                 <div className="flex items-center space-x-1.5">
-                  <span className="font-extrabold text-sm text-slate-900 tracking-tight leading-none">
+                  <span className="font-extrabold text-sm text-white tracking-tight leading-none">
                     LinkLift
                   </span>
-                  <span className="text-[9px] uppercase font-bold tracking-wider px-1 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">
+                  <span className="text-[9px] uppercase font-bold tracking-wider px-1 py-0.5 rounded bg-[#1c3a4a] text-slate-300 border border-[#295770]/40">
                     v1.2
                   </span>
                 </div>
-                <div className="flex items-center space-x-1 text-[11px] text-slate-500 mt-1 truncate">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 flex-shrink-0" />
+                <div className="flex items-center space-x-1 text-[11px] text-slate-400 mt-1 truncate">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0 animate-pulse" />
                   <span className="truncate max-w-[130px] font-medium">{activeServerName}</span>
                 </div>
               </div>
             </div>
-            <ChevronsUpDown className="h-4 w-4 text-slate-400 group-hover:text-slate-600 transition flex-shrink-0 ml-1" />
+            <ChevronsUpDown className="h-4 w-4 text-slate-500 group-hover:text-slate-300 transition flex-shrink-0 ml-1" />
           </button>
         </div>
 
-        {/* Domain Scope Filter (Clean In-Line Selector) */}
-        <div className="px-4 py-2.5 border-b border-slate-100 bg-slate-50/70">
-          <div className="flex items-center justify-between text-[11px] text-slate-500 mb-1">
-            <span className="font-semibold uppercase tracking-wider text-[10px] text-slate-400">Domain Scope</span>
+        {/* Domain Scope Filter (Integrated Dark Pill) */}
+        <div className="px-4 py-2.5 border-b border-[#1c3a4a] bg-[#0a141a]/50">
+          <div className="flex items-center justify-between text-[11px] text-slate-400 mb-1">
+            <span className="font-semibold uppercase tracking-wider text-[10px]">Domain Scope</span>
             {selectedDomain && (
               <button 
                 onClick={() => onSelectDomain('')}
-                className="text-[10px] text-[#377495] hover:underline"
+                className="text-[10px] text-[#8fbdd6] hover:underline"
               >
                 Reset
               </button>
@@ -174,7 +173,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             <select
               value={selectedDomain}
               onChange={(e) => onSelectDomain(e.target.value)}
-              className="w-full bg-white text-xs text-slate-700 rounded-lg px-2.5 py-1.5 appearance-none border border-slate-200 focus:outline-none focus:ring-1 focus:ring-[#377495] cursor-pointer pr-8 shadow-2xs font-medium"
+              className="w-full bg-[#142834] text-xs text-slate-200 rounded-lg px-2.5 py-1.5 appearance-none border border-[#1c3a4a] focus:outline-none focus:ring-1 focus:ring-[#377495] cursor-pointer pr-8 font-medium"
             >
               <option value="">Global (All Domains)</option>
               {domains.map((d) => (
@@ -188,7 +187,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
 
         {/* Navigation Sections */}
-        <div className="flex-1 overflow-y-auto px-3 py-3.5 space-y-5 scrollbar-thin scrollbar-thumb-slate-200">
+        <div className="flex-1 overflow-y-auto px-3 py-3.5 space-y-5 scrollbar-thin scrollbar-thumb-[#1c3a4a]">
           {navSections.map((section) => (
             <div key={section.title}>
               <div className="px-3 text-[10px] font-bold text-slate-400 tracking-wider mb-1.5">
@@ -208,14 +207,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
                       className={`
                         w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs transition-all duration-150 group
                         ${isActive 
-                          ? 'bg-[#377495] text-white font-semibold shadow-xs' 
-                          : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900 font-medium'
+                          ? 'bg-[#377495] text-white font-semibold shadow-md shadow-[#377495]/20' 
+                          : 'text-slate-300 hover:bg-[#142834] hover:text-white font-medium'
                         }
                       `}
                     >
                       <div className="flex items-center space-x-2.5 truncate">
                         <Icon className={`h-4 w-4 transition-transform group-hover:scale-105 flex-shrink-0 ${
-                          isActive ? 'text-white' : 'text-slate-400 group-hover:text-slate-600'
+                          isActive ? 'text-white' : 'text-slate-400 group-hover:text-slate-200'
                         }`} />
                         <span className="truncate">{item.label}</span>
                       </div>
@@ -230,7 +229,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
                         {item.badge !== undefined && (
                           <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono font-bold ${
-                            isActive ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-600'
+                            isActive ? 'bg-white/20 text-white' : 'bg-[#1c3a4a] text-slate-300 group-hover:bg-[#295770]'
                           }`}>
                             {item.badge}
                           </span>
@@ -244,34 +243,34 @@ export const Sidebar: React.FC<SidebarProps> = ({
           ))}
         </div>
 
-        {/* Minimalist Bottom Status Footer */}
-        <div className="p-3.5 border-t border-slate-200 bg-slate-50/70 text-xs space-y-2">
+        {/* Minimalist Bottom Status Footer - Dark Mode */}
+        <div className="p-3.5 border-t border-[#1c3a4a] bg-[#0a141a] text-xs space-y-2">
           {/* SignalR Socket status */}
-          <div className="flex items-center justify-between text-[11px] text-slate-500 font-medium">
+          <div className="flex items-center justify-between text-[11px] text-slate-400 font-medium">
             <span className="flex items-center space-x-1.5">
               {signalRConnected ? (
-                <Wifi className="h-3.5 w-3.5 text-emerald-600" />
+                <Wifi className="h-3.5 w-3.5 text-emerald-400" />
               ) : (
-                <WifiOff className="h-3.5 w-3.5 text-rose-500" />
+                <WifiOff className="h-3.5 w-3.5 text-rose-400" />
               )}
               <span>Socket Stream</span>
             </span>
-            <span className={`font-semibold ${signalRConnected ? 'text-emerald-700' : 'text-rose-600'}`}>
+            <span className={`font-semibold ${signalRConnected ? 'text-emerald-400' : 'text-rose-400'}`}>
               {signalRConnected ? 'Connected' : 'Reconnecting...'}
             </span>
           </div>
 
           {/* Engine health + OpenAPI */}
-          <div className="flex items-center justify-between text-[11px] text-slate-500 font-medium">
+          <div className="flex items-center justify-between text-[11px] text-slate-400 font-medium">
             <span className="flex items-center space-x-1.5">
-              <span className={`h-2 w-2 rounded-full ${backendHealthy ? 'bg-emerald-500' : 'bg-amber-500'}`} />
+              <span className={`h-2 w-2 rounded-full ${backendHealthy ? 'bg-emerald-400' : 'bg-amber-400'}`} />
               <span>Core Engine</span>
             </span>
             <a 
               href="http://localhost:5000/swagger" 
               target="_blank" 
               rel="noreferrer"
-              className="text-[#377495] hover:underline flex items-center space-x-0.5 font-semibold"
+              className="text-[#8fbdd6] hover:text-white hover:underline flex items-center space-x-0.5 font-semibold transition"
             >
               <span>OpenAPI</span>
               <ExternalLink className="h-3 w-3 ml-0.5" />
