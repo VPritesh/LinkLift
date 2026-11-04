@@ -1,4 +1,11 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+    <File Path="CONTRIBUTING.md" />
+    <File Path="docker-compose.yml" />
+    <File Path="LICENSE.md" />
+    <File Path="README.md" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="src/LinkLift.Api/LinkLift.Api.csproj" />
     <Project Path="src/LinkLift.Application/LinkLift.Application.csproj" />
