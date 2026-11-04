@@ -40,6 +40,17 @@ export function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(() => {
+    return localStorage.getItem('linklift_sidebar_collapsed') === 'true';
+  });
+
+  const handleToggleSidebarCollapse = () => {
+    setIsSidebarCollapsed(prev => {
+      const next = !prev;
+      localStorage.setItem('linklift_sidebar_collapsed', String(next));
+      return next;
+    });
+  };
 
   // Modals / Drawers
   const [createDrawerOpen, setCreateDrawerOpen] = useState(false);
@@ -172,10 +183,14 @@ export function App() {
         onCloseMobile={() => setMobileSidebarOpen(false)}
         activeServerName={activeServer.name}
         onOpenServerSwitcher={() => setServerSwitcherOpen(true)}
+        isCollapsed={isSidebarCollapsed}
+        onToggleCollapse={handleToggleSidebarCollapse}
       />
 
       {/* Main Content Area */}
-      <div className="flex-1 flex flex-col min-w-0 lg:pl-72">
+      <div className={`flex-1 flex flex-col min-w-0 transition-all duration-300 ease-in-out ${
+        isSidebarCollapsed ? 'lg:pl-20' : 'lg:pl-72'
+      }`}>
         {/* Top App Bar */}
         <TopBar
           currentView={currentView}
